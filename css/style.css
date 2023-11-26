@@ -30,7 +30,7 @@ p {
   margin: 0;
 }
 
-/* Nav Bar */
+/* Nav Bar formatting (nested flexboxes) */
 header {
   display: flex;
   flex-direction: row;
@@ -106,7 +106,7 @@ header nav ul li a {
   
 }
 
-/* Flexbox layout for the main body */
+/* Formatting for the main body (including all the about me, portfolio, etc. sections) - Flexbox */
 
 .page-wrapper {
   display: flex;
@@ -142,7 +142,7 @@ header nav ul li a {
   padding: 5px 20px 5px 20px;
 }
 
-/* About me formatting */
+/* About Me body content formatting (flexbox) */
 #about .contentbody{
   display: flex;
   flex-direction:row;
@@ -160,6 +160,7 @@ header nav ul li a {
   padding:0px 20px 0px 20px
 }
 
+/* My Portfolio body content formatting (grid) */
 #portfolioGrid {
   margin: 0px;
   display: grid;
@@ -178,6 +179,7 @@ header nav ul li a {
   border: var(--border);
 }
 
+/* The overlay and hover effects */
 #portfolioGrid div:before {
   content: "";
   display: block;
@@ -191,10 +193,12 @@ header nav ul li a {
 }
 
 #portfolioGrid div:hover:before {
-  background-color:rgba(54,69,79,0);
+  background-color:rgba(54,69,79,0.2);
   cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
 }
 
+/* Each individual project background */
 #project1 {
   grid-area: project1;
   background-image: url("../images/02-portfolio-1.jpg");
@@ -215,6 +219,7 @@ header nav ul li a {
   background-image: url("../images/02-portfolio-4.jpg");
 }
 
+/* Project label formatting */
 .projectLabel {
   position:relative;
   display:block;
@@ -229,4 +234,25 @@ header nav ul li a {
 
 .projectLabel p {
   font-size: 12px;
+}
+
+/* Footer formatting (flexbox) */
+#contact .contentbody ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+#contact .contentbody ul li {
+  font-size: 18px;
+  color: var(--darker);
+  border-bottom: 3px solid var(--darker);
+}
+
+#contact .contentbody ul li a {
+  text-decoration: none;
+  color: var(--darker);
 }
