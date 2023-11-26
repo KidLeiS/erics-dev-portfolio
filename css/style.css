@@ -1,7 +1,14 @@
+/* Creating variables */
+:root {
+  --darker:#36454f;
+  --lighter:#ADD8E6;
+}
+
 * {
   box-sizing: border-box;
 }
 
+/* General fonts */
 body {
   margin: 0;
   padding: 0;
@@ -20,4 +27,145 @@ h6 {
 
 p {
   margin: 0;
+}
+
+/* Nav Bar */
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  align-items: center;
+  padding: 3px 10px 3px 0px;
+  background-color: var(--darker);
+}
+
+header h1 {
+  width: 300px;
+  display: flex;
+  justify-content: right;
+  color:var(--darker);
+  font-size: 40px;
+  background-color:var(--lighter);
+  padding: 0px 15px 0px 15px;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: right;
+  align-items: center;
+  list-style-type: none;
+}
+
+header nav ul li {
+  margin: 0px 25px 0px 25px;
+}
+
+header nav ul li a {
+  font-size: 28px;
+  color: var(--lighter);
+  text-decoration: none;
+  border-bottom: 3px solid var(--lighter);
+  padding: 3px;
+}
+
+/* Hero Banner (cover photo) formatting */
+
+.hero-banner {
+  /* Sets the background photo */
+  background-image: url("../images/02-hero-bg.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  height: 200px;
+}
+
+/* Shading for hero banner */
+.hero-banner::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54,69,79,0.7)
+}
+  
+
+.hero-banner div {
+  position: relative;
+  width: fit-content;
+  padding: 10px 20px;
+  top: -40%;
+  right:-65%;
+  background-color: var(--lighter);
+  color: var(--darker);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.page-section {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: left;
+}
+
+.page-section h2 {
+  width: 30%;
+  text-align: right;
+  font-size: 50px;
+  color: var(--darker);
+  padding-right: 6px;
+}
+
+.contentbody {
+  width: 70%;
+  border-left: 4px solid var(--darker);
+  padding: 20px;
+}
+
+#portfolioGrid {
+  margin: 0px;
+  display: grid;
+  grid-template-rows: 250px 250px 250px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "project1 project1 project2"
+  "project1 project1 project3"
+  "project4 project4 project4";
+}
+
+#portfolioGrid div {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#project1 {
+  grid-area: project1;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#project2 {
+  grid-area: project2;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#project3 {
+  grid-area: project3;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#project4 {
+  grid-area: project4;
+  background-image: url("../images/02-portfolio-4.jpg");
 }
