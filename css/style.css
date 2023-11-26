@@ -30,7 +30,7 @@ p {
   margin: 0;
 }
 
-/* Nav Bar formatting (nested flexboxes) */
+/* Nav Bar and Title bar formatting (nested flexboxes) */
 header {
   display: flex;
   flex-direction: row;
@@ -243,7 +243,7 @@ header nav ul li a {
   list-style-type: none;
   align-items: center;
   justify-content: space-between;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 #contact .contentbody ul li {
@@ -255,4 +255,91 @@ header nav ul li a {
 #contact .contentbody ul li a {
   text-decoration: none;
   color: var(--darker);
+}
+
+/* Viewport media queries */
+
+@media only screen and (max-width: 950px) {
+
+  header h1 {
+    color: var(--lighter);
+    background-color: var(--darker);
+    justify-content: center;
+  }
+  
+  header nav ul {
+    display: none;
+  }
+
+  .hero-banner {
+    height:120px;
+  }
+
+  .hero-banner div {
+    position: absolute;
+    width: fit-content;
+    padding: 10px 20px;
+    top: 100px;
+    left: 20px;
+    background-color: var(--lighter);
+    color: var(--darker);
+    z-index: 1;
+  }
+
+  .page-section {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  /* Formatting for all the subheadings (left hand side) */
+
+  .page-section h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    color: var(--darker);
+    padding-bottom: 10px;
+  }
+
+  /* Formatting for all the body content (right hand side) */
+
+  .contentbody {
+    width: 100%;
+    border-top: 4px solid var(--darker);
+    border-left: none;
+    padding: 20px 5px 20px 5px;
+  }
+
+  /* About Me image resizing */
+
+  #about .contentbody img{
+    width:150px;
+    height:150px;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  #portfolioGrid {
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 250px 250px 250px 250px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "project1"
+    "project2" 
+    "project3" 
+    "project4";
+  }
+
+  .hideableFooters {
+    display:none;
+  }
+
+  #about .contentbody div p {
+    font-size: 14px;
+  }
 }
