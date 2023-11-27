@@ -205,12 +205,12 @@ header nav ul li a {
 /* Each individual project background */
 #project1 {
   grid-area: project1;
-  background-image: url("../images/02-portfolio-1.jpg");
+  background-image: url("../images/Portfolio.png");
 }
 
 #project2 {
   grid-area: project2;
-  background-image: url("../images/02-portfolio-2.jpg");
+  background-image: url("../images/Horiseon.png");
 }
 
 #project3 {
