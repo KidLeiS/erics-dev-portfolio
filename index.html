@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <!-- main logo / nav -->
+  <!-- Main document title and nav bar -->
   <header>
     <h1>Eric Shen</h1>
     <nav>
@@ -28,57 +28,61 @@
     </nav>
   </header>
 
-  <!-- hero banner -->
+  <!-- Hero banner (cover photo in CSS stylesheet) -->
   <section class="hero-banner">
     <div>
       <h2>Aspiring web developer!</h2>
     </div>
   </section>
 
+  <!-- Main body -->
   <main class="page-wrapper">
-    <!-- about me -->
+
+    <!-- About Me container -->
     <section class="page-section" id="about">
       <h2>About Me</h2>
       <div class="contentbody">
-        <img src="images/Eric.jpeg">
+        <img src="images/Eric.jpeg" alt="A portrait of Eric">
         <div>
           <p>I am an aspiring and passionate software developer, who started learning front end development in Nov-2023. Much of my portfolio are currently placeholders, but my goal is to learn quickly and have 10 major projects done by June of next year!</p>
         </div>
       </div>
     </section>
 
-    <!-- portfolio container -->
+    <!-- My Portfolio container -->
     <section class="page-section" id="portfolio">
       <h2>My Portfolio</h2>
       <div class="contentbody" id="portfolioGrid">
-        <div class="project" id="project1">
+        <div class="project" id="project1" onclick="window.location='https://kidleis.github.io/erics-dev-portfolio/';">
+            <div class="projectLabel">
+              <h3>Portfolio website</h3>
+              <p>HTML & CSS</p>
+            </div>
+        </div>
+  
+        <div class="project" id="project2" onclick="window.location='https://kidleis.github.io/horiseon-marketing-homepage/';">
           <div class="projectLabel">
-            <h3>Portfolio website</h3>
-            <p>HTML & CSS</p>
+            <h3>Horisean website</h3>
+            <p>Refactoring CSS</p>
           </div>
         </div>
-        <div class="project" id="project2">
-          <div class="projectLabel">
-            <h3>Project 2</h3>
-            <p>Description</p>
-          </div>
-        </div>
-        <div class="project" id="project3">
+
+        <div class="project" id="project3" onclick="window.location='https://kidleis.github.io/erics-dev-portfolio/';">
           <div class="projectLabel">
             <h3>Project 3</h3>
-            <p>Description</p>
+            <p>TBH (placeholder)</p>
           </div>
         </div>
-        <div class="project" id="project4">
+        <div class="project" id="project4" onclick="window.location='https://kidleis.github.io/erics-dev-portfolio/';">
           <div class="projectLabel">
             <h3>Project 4</h3>
-            <p>Description</p>
+            <p>TBD (placeholder)</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- contact -->
+    <!-- Contact Me - footer of the main section -->
     <footer class="page-section" id="contact">
       <h2>Contact Me</h2>
       <div class="contentbody">
@@ -93,8 +97,11 @@
           </li>
         </ul>
       </div>
+
     </footer>
+
   </main>
+
 </body>
 
 </html>
